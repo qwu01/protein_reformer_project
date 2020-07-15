@@ -1,0 +1,37 @@
+	protein_reformer_project/
+
+		data/
+		
+			raw/						## download from uniprot
+				organism_x/
+					x.fasta 			## download from uniprot
+					
+			for_training/
+				organism_x/
+					x.txt 				## converted from fasta: only keep sequences
+					x.train.txt 		## training dataset
+					x.val.txt 			## eval dataset
+					x.csv 				## later being concat with protein_labels.csv
+				...
+				
+			for_visualization/
+				vis.csv					## contains all proteins. ID, organism, sequences, label1, label2, ...
+				# this may be very large
+				
+		configs/
+			tokenizer.config.file		## e.g. tokenizer_config.json, spiece.model, spiece.vocab ..
+			model.config.file			## e.g. config.json
+			
+		output/
+			checkpoint-000				## checkpoints in this folder
+			
+		runs/
+			run_log_files				## not important
+			
+		wandb/
+			wandb_run_log_files			## not important
+			
+		src/
+			contain codes.py
+			
+		...
